@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Minecraft-style UI components */
+.minecraft-button {
+  @apply bg-gray-600 hover:bg-gray-500 text-white font-medium px-4 py-2 rounded transition-colors;
+  border: 2px solid #4b5563;
+  box-shadow: inset -2px -2px 0 rgba(0, 0, 0, 0.5), inset 2px 2px 0 rgba(255, 255, 255, 0.3);
+}
+
+.minecraft-button:hover {
+  box-shadow: inset -2px -2px 0 rgba(0, 0, 0, 0.3), inset 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.minecraft-input {
+  @apply bg-gray-800 text-white border-2 border-gray-600 px-3 py-2 rounded focus:border-green-500 focus:outline-none;
+}
+
+.minecraft-card {
+  @apply bg-gray-800 border border-gray-700 rounded-lg p-4;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Loading animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
